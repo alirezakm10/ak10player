@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id='imp'></div>
+    <img src="./assets/backgrounds/1.jpg" id="background" />
+    <audio src="assets/musics/1.mp3" id="song"></audio>
+
+    <div class="container">  
+        <div class="thumb-container">
+            <img src="./assets/thumbs/1.jpg" id="thumbnail" alt="">
+        </div>
+        <div class="box">
+                <span class="hoveredTime"></span>
+                <h5 class="hoveredTimeMessage"></h5>
+              <div class="currentTime">00:00</div>
+        <input 
+        type="range" 
+        id="progress-bar" 
+        min="0" 
+        max="" 
+        value="0" 
+        onchange="changeProgressBar()"
+    />
+    <div class="durationTime">05:34</div>
+    <span class="controllers">
+        <img src="./assets/icons/backward.png" onclick="prevSong()" id="prevTrack" class="flex-items"/>
+        <img src="./assets/icons/play.png" onclick="playPause()" id="pPause" class="flex-items" />
+<img src="./assets/icons/forward.png" onclick="nextSong()" id="nextTrack" class="flex-items" />
+    </span>
+   
+            </div>      
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="screenblinker.js"></script>
+<script src="player.js"></script>
+</html>
