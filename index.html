@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+  </head>
+  <body>
+    <div id="imp"></div>
+    <img src="./assets/backgrounds/1.jpg" id="background" />
+    <audio src="assets/musics/1.mp3" id="song"></audio>
+
+    <div class="container">
+      <div class="thumb-container">
+        <img src="./assets/thumbs/1.jpg" id="thumbnail" alt="" />
+      </div>
+      <span><a href="" class="icofont-listing-box icofont-2x list"></a></span>
+      <span><a href="" class="icofont-share icofont-2x share"></a></span>
+      <div class="box">
+        <span class="hoveredTime"></span>
+        <h5 class="hoveredTimeMessage"></h5>
+        <div class="currentTime">00:00</div>
+        <input
+          type="range"
+          id="progress-bar"
+          min="0"
+          max=""
+          value="0"
+          onchange="changeProgressBar()"
+        />
+        <div class="durationTime">05:34</div>
+        <span class="controllers">
+          <button onclick="prevSong()" id="prevTrack" class="icofont-ui-previous icofont-2x"></button>
+          <button onclick="playPause()" id="pPause" class="icofont-ui-play icofont-2x"></button>
+          <button onclick="nextSong()" id="nextTrack" class="icofont-ui-next icofont-2x"></button>
+        </span>
+        <span onclick="download()"><a type="download" href="" class="icofont-download icofont-2x download"></a></span>
+        <span onclick="null()"><a href="" class="icofont-audio icofont-2x audio"></a></span>
+      </div>
+    </div>
+  </body>
+  <script src="jquery.min.js"></script>
+  <script src="screenblinker.js"></script>
+  <script src="player.js"></script>
+</html>
